@@ -7,13 +7,13 @@ int balls = 0;
 bool guessedCorrectly = false;
 int attemptCount = 0;
 int generatedCount = 0;
+
 Random rand = new Random();
 
 while (generatedCount < numCount)
 {
-    int newDigit = rand.Next(0, 10); // 0부터 9까지의 난수 생성
+    int newDigit = rand.Next(0, 10);
 
-    // 이미 생성된 숫자인지 확인 (중복 방지)
     if (!targetNumber.Contains(newDigit))
     {
         targetNumber[generatedCount] = newDigit;
